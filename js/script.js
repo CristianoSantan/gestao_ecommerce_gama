@@ -3,6 +3,10 @@ const customers = JSON.parse(localStorage.getItem('customers'));
 
 let dataCustomers = document.getElementById('data-customers');
 let dataProducts = document.getElementById('data-products');
+let dataRenda = document.getElementById('data-renda');
+
+dataProducts.innerHTML = 0;
+dataRenda.innerHTML = 0;
 
 // get Products
 if (products !== null) {
@@ -14,13 +18,16 @@ if (products !== null) {
     .map(
       (prod) =>
         `<tr>
-            <td>${prod.name}</td>
-            <td>${prod.category}</td>
-            <td>$${prod.price}</td>
-            <td>${prod.quantidade}</td>
-        </tr>
-        <tr>
-            <td>${prod.description}</td>
+            <td colspan="1">${prod.id}</td>
+            <td colspan="1">
+                <b>${prod.name}</b></br>
+                <hr>
+                <span>Descrição</span></br>
+                ${prod.description}
+            </td>
+            <td colspan="1">${prod.category}</td>
+            <td colspan="1">$${prod.price}</td>
+            <td colspan="1">${prod.quantidade}</td>
         </tr>`
     )
     .join('');
@@ -29,6 +36,7 @@ if (products !== null) {
 }
 
 // get customers
+dataCustomers.innerHTML = 0;
 
 if (customers !== null) {
   dataCustomers.innerHTML = customers.length;
@@ -41,20 +49,16 @@ if (customers !== null) {
         `<div class="customer">
           <div class="info">
             <img
-              src="http://agbrands.com.br/wp-content/uploads/2017/01/perfil-300x225.jpg"
+              src=${client.photo}
               width="40px"
               height="40px"
               alt=""
             />
             <div>
               <h4>${client.name}</h4>
-              <small>${client.carrer}</small>
+              <small>${client.carrer} <span class="las la-phone"></span> ${client.mobile}</small>
+              <p><span class="las la-comment"></span> ${client.email}</p>
             </div>
-          </div>
-          <div class="contact">
-            <span class="las la-user-circle"></span>
-            <span class="las la-comment"></span>
-            <span class="las la-phone"></span>
           </div>
         </div>`
     )

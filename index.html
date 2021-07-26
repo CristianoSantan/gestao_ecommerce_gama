@@ -32,12 +32,12 @@
           </li>
           <li>
             <a href="./customer.html"
-              ><span class="las la-users"></span><span>Customers</span></a
+              ><span class="las la-users"></span><span>Clientes</span></a
             >
           </li>
           <li>
             <a href="./inventory.html"
-              ><span class="las la-receipt"></span><span>Inventory</span></a
+              ><span class="las la-receipt"></span><span>Produtos</span></a
             >
           </li>
         </ul>
@@ -73,7 +73,7 @@
           <div class="card-single">
             <div>
               <h1 id="data-customers"></h1>
-              <span>Customers</span>
+              <span>Clientes</span>
             </div>
             <div>
               <span class="las la-users"></span>
@@ -82,7 +82,7 @@
           <div class="card-single">
             <div>
               <h1 id="data-products"></h1>
-              <span>Inventory</span>
+              <span>Produtos</span>
             </div>
             <div>
               <span class="las la-receipt"></span>
@@ -90,8 +90,8 @@
           </div>
           <div class="card-single">
             <div>
-              <h1>$6k</h1>
-              <span>Income</span>
+              <h1>$<span id="data-renda"></span>k</h1>
+              <span>Renda</span>
             </div>
             <div>
               <span class="lab la-google-wallet"></span>
@@ -103,19 +103,20 @@
             <div class="card">
               <div class="card-header">
                 <h3>Produtos Recentes</h3>
-                <button>
+                <a href="./inventory.html">
                   Cadastrar<span class="las la-arrow-right"></span>
-                </button>
+                </a>
               </div>
               <div class="card-body">
                 <div class="table-responsive">
                   <table width="100%">
                     <thead>
                       <tr>
+                        <td>Id</td>
                         <td>Produto</td>
                         <td>Categoria</td>
                         <td>Preço</td>
-                        <td>Quantidade</td>
+                        <td>Qnt.</td>
                       </tr>
                     </thead>
                     <tbody id="tbody-products"></tbody>
@@ -128,10 +129,9 @@
             <div class="card">
               <div class="card-header">
                 <h3>Novos Clientes</h3>
-                <button>
-                  <a href="./customer.html">Cadastrar</a>
-                  <span class="las la-arrow-right"></span>
-                </button>
+                <a href="./customer.html"
+                  >Cadastrar <span class="las la-arrow-right"></span
+                ></a>
               </div>
               <div class="card-body" id="card-customer"></div>
             </div>

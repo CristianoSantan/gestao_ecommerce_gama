@@ -8,6 +8,7 @@ formCustomer.addEventListener('submit', (e) => {
   let email = document.getElementById('email').value;
   let carrer = document.getElementById('carrer').value;
   let mobile = document.getElementById('mobile').value;
+  let photo = document.getElementById('photo').value;
 
   let customers = JSON.parse(localStorage.getItem('customers')) ?? [];
 
@@ -19,6 +20,7 @@ formCustomer.addEventListener('submit', (e) => {
     email,
     carrer,
     mobile,
+    photo,
   };
 
   customers.push(data);
