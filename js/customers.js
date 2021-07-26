@@ -26,4 +26,6 @@ formCustomer.addEventListener('submit', (e) => {
   let jsonData = JSON.stringify(customers);
 
   localStorage.setItem('customers', jsonData);
+
+  window.history.back();
 });

@@ -28,4 +28,6 @@ formProduct.addEventListener('submit', (e) => {
   let jsonData = JSON.stringify(products);
 
   localStorage.setItem('products', jsonData);
+
+  window.history.back();
 });
